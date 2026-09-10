@@ -185,3 +185,19 @@ console.log(newNames.lastIndexOf('Vinay'));
 // includes: returns true if an element is present in an array
 console.log(newNames.includes('Vinay'));
 // true
+
+// sort: sorts the strings in an array in ascending order by default
+let namesNew=['Vinay','vinay','Machha','machha','Babu','babu'];
+
+console.log(namesNew.sort());
+// [ 'Babu', 'Machha', 'Vinay', 'babu', 'machha', 'vinay' ]
+
+// Even when you have an array of numbers, it considers them as strings
+let newNumbers=[20,11,1,3,2,223];
+// The above array is converted into array of strings, and then sorted based on their ascii values
+
+console.log(newNumbers.sort());
+// [ 1, 11, 2, 20, 223, 3 ]
+// we can sort the numbers using following function
+console.log(newNumbers.sort((a,b)=>a-b));
+// [ 1, 2, 3, 11, 20, 223 ]
