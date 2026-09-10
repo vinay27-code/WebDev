@@ -124,3 +124,64 @@ console.log(arr7);
 arr7.splice(4,0,5);
 console.log(arr7);
 // [1,2,3,4,5,6,7,8,9,10]
+
+// concatenating arrays using concat(). It returns a new array
+let arr8=[1,2,3,4,5];
+let arr9=[6,7,8,9,10];
+
+let concatArr1=arr8.concat(arr9);
+console.log(concatArr1);
+// [1,2,3,4,5,6,7,8,9,10]
+
+// we can also concatenate multiple arrays
+let arr10=[11,12,13,14,15];
+let concatArr2=arr8.concat(arr9,arr10);
+console.log(concatArr2);
+// // [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+
+// Alternatively we can also use spread operator to concatenate arrays
+
+let arr11=[...arr8,...arr9,...arr10];
+console.log(arr11);
+// [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+// Note: spread operator does not work on concatenating 2d arrays
+
+// Destructuring an array
+
+let newArr=[1,2,3,4,5,6,7,8,9,10];
+
+// assume we want to print first 2 elements
+
+let [first, second]=newArr;
+
+console.log(first,second);
+// 1 2
+
+// if we want to store remaining array elements, we can use rest operator
+
+let [one, two, ...remaining]=newArr;
+console.log(one, two, remaining);
+// 1 2 [3,4,5,6,7,8,9,10]
+
+// left=rest
+// right=spread
+
+// Join operator: joins all the elements of the array using any differentiator and returns it as string
+let names=['Vinay','Babu','Machha'];
+
+console.log(names.join(','));
+// Vinay,Babu,Machha
+
+// indexof: returns 1st index of an element in an array
+
+console.log(names.indexOf('Babu'));
+// 1
+
+// if there's multiple same elements in an array, and we want to find the last index, then we use
+let newNames=['Vinay','Babu','Machha','Vinay'];
+console.log(newNames.lastIndexOf('Vinay'));
+// 3
+
+// includes: returns true if an element is present in an array
+console.log(newNames.includes('Vinay'));
+// true
